@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <style>
+        /* CSS */
+        body, html  {
+            font-size: 20px;
+        }
+        h1, li  {
+            font-size: 0.9rem;    
+            }
+        body, html{
+            font-size: 20px;
+        }   
+        h1  {
+            font-size: 40px;
+        }
+        /* li{
+            list-style-type: circle;
+        }*/
+        ol {
+            list-style-type: none;
+        }
+        /* id selector */
+        #p18{
+            color: blue;
+        }
+        #p19{
+            color: green;
+        }
+        /* class selector */
+        .movies{
+            color: blueviolet;
+        }
+        .books{
+            color:aquamarine;
+        }
+        .good{
+            text-decoration: underline;
+        }
+        /*Specialized selectors*/
+
+        .insect.flying {
+            text-decoration: underline; 
+            font-weight: bold; 
+            }
+        #intro a { color: red; }
+        #guideline a { color: #00FF00; }
+        #intro blockquote a{
+            font-weight: bold;
+        }
+        #intro > a{
+            font-size: larger;
+        }
+        body > * { margin-left: 10px; }
+        
+        p.forest span{
+            color: green;
+        }
+        p span.tree{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Books</h1> 
+    <ol> 
+        <li>A la Recherche de Temps Perdu</li>
+        <li>Middlemarch</li>
+        <li>Ulysses</li>
+        <li>Don Quixote</li>
+        <li>Moby Dick</li>
+        <li>Hamlet</li>
+        <li id="p18">War and Peace</li>
+        <li id="p19">The Odyssey</li>
+        <li class="good movies">The Great Gatsby</li>
+        <li class="movies">The Divine Comedy</li>
+        <li class="movies">Madame Bovary</li>
+        <li>The Brothers Karamazov</li>
+        <li>One Hundred Years of Solitude</li>
+        <li class="books">The Iliad</li>
+        <li class="good books">Lolita</li>
+        <li class="books">Anna Karenina</li>
+        <li>Crime and Punishment</li>
+        <li>The Sound and the Fury</li>
+        <li>Wuthering Heights</li>
+        <li>Le Rouge et le Noir</li>
+    </ol>
+    <hr>
+    <ul>
+        <li class="bird flying">parrot</li>
+        <li class="bird">ostrich</li>
+        <li class="insect">ant</li>
+        <li class="insect flying">wasp</li>
+        <li class="insect flying">moth</li>
+        <li class="flying">airplane</li>
+    </ul>
+        <hr>
+<section id="intro">Welcome to <a href="#palaceland">PalaceLand</a>, world renown <q>Land of endless palaces and <a href="#delight">delights</a></q>. As you make your way about, remember the words of our founder <blockquote>Shouldn't we have <a href="#chairs">chairs</a>? Never made much sense wandering room a room looking for a place to sit a spell. Folk that don't sit are not likely all right in the <a href="#head">head</a></blockquote></section>
+<section id="guideline">There are guidelines to follow while in <a href="#palaceland">PalaceLand</a>. They are outlined on the back of your <q>Daring Footman <a href="#trademark">(tm)</a></q> card. But the spirit of the guidelines are best summed up by our founder <blockquote>Don't just <a href="#standthere">stand there</a> with your mouth hanging open waiting for a pair of nesting birds.</blockquote> (and no <a href="#camera_policy">flash photography</a> please.)</section>
+<hr>
+<p class="forest"><span class="tree">arbol</span></p>
+</body>
+</html>

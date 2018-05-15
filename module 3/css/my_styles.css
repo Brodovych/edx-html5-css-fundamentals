@@ -1,0 +1,12 @@
+p {
+    font-size: 18px;
+    /* This is a CSS comment, it can span several lines, cannot be nested */
+    font-family:'Times New Roman';
+    line-height: 15px;
+    color: #000000;
+  }
+
+h1 {
+    font-size: 40px;
+    color: rgb(255, 0, 0);
+}
