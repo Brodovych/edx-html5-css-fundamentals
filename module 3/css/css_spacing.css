@@ -1,0 +1,13 @@
+ol {
+    margin-top: 50px;
+}
+
+ol li {
+    margin-left: 20px;
+    padding: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: darkred;
+}
