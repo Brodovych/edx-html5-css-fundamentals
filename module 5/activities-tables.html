@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Activities Tables</title>
+    <style>
+    
+   
+    thead{
+        background-color: rgb(107, 107, 107);
+    }
+    tbody{
+        background-color: rgb(199, 199, 199);
+    }
+    table, tr, td, th{
+        border: 2px solid black;
+        padding: 5px;
+        border-collapse: collapse;
+    } 
+   
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr><th>Attributes</th><th>Desciption</th><th>Usage</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>src</td><td>Used to specify the URL of the image</td><td>src="images/test.png"</td></tr>
+            <tr><td>alt</td><td>Used to specify replacement text for the image</td><td>alt="Test image for HTML5 course"</td></tr>
+        </tbody>
+</table>
+<br>
+<table>
+        <thead>
+            <tr><th>Attributes</th><th>Desciption</th><th>Usage</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>src</td><td>Used to specify the URL of the image</td><td rowspan="2">src="images/test.png"</td></tr>
+            <tr><td colspan="2">alt</td></tr>
+        </tbody>
+</table>
+<br>
+<table>
+    <thead>
+        <tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td colspan="2">1</td><td colspan="2">3</td></tr>
+    </tbody>
+</table>
+</body>
+</html>

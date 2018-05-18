@@ -1,153 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        hr{
+        html body {
+            margin-left: 20px;
+
+        }
+
+        hr {
             margin-top: 30px;
             margin-bottom: 30px;
         }
-       
-		.fixed_headers {
-			width: 750px;
-			table-layout: fixed;
-			border-collapse: collapse;
-		}
-		.fixed_headers th {
-			text-decoration: underline;
-		}
-		.fixed_headers th,
-		.fixed_headers td {
-			padding: 5px;
-			text-align: left;
-		}
-		.fixed_headers td:nth-child(1),
-		.fixed_headers th:nth-child(1) {
-			min-width: 200px;
-		}
-		.fixed_headers td:nth-child(2),
-		.fixed_headers th:nth-child(2) {
-			min-width: 200px;
-		}
-		.fixed_headers td:nth-child(3),
-		.fixed_headers th:nth-child(3) {
-			width: 350px;
-		}
-		.fixed_headers thead {
-			background-color: #333333;
-			color: #fdfdfd;
-		}
-		.fixed_headers thead tr {
-			display: block;
-			position: relative;
-		}
-		.fixed_headers tbody {
-			display: block;
-			overflow: auto;
-			width: 100%;
-			height: 300px;
-		}
-		.fixed_headers tbody tr:nth-child(even) {
-			background-color: #d41919;
-		}
-		.old_ie_wrapper {
-			height: 300px;
-			width: 750px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}
-		.old_ie_wrapper tbody {
-			height: auto;
-		}
-	
+
+        .fixed_headers {
+            width: 750px;
+            table-layout: fixed;
+            border-collapse: collapse;
+        }
+
+        .fixed_headers th {
+            text-decoration: underline;
+        }
+
+        .fixed_headers th,
+        .fixed_headers td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        .fixed_headers td:nth-child(1),
+        .fixed_headers th:nth-child(1) {
+            min-width: 200px;
+        }
+
+        .fixed_headers td:nth-child(2),
+        .fixed_headers th:nth-child(2) {
+            min-width: 200px;
+        }
+
+        .fixed_headers td:nth-child(3),
+        .fixed_headers th:nth-child(3) {
+            width: 350px;
+        }
+
+        .fixed_headers thead {
+            background-color: #333333;
+            color: #fdfdfd;
+        }
+
+        .fixed_headers thead tr {
+            display: block;
+            position: relative;
+        }
+
+        .fixed_headers tbody {
+            display: block;
+            overflow: auto;
+            width: 100%;
+            height: 300px;
+        }
+
+        .fixed_headers tbody tr:nth-child(even) {
+            background-color: #d41919;
+        }
+
+        .old_ie_wrapper {
+            height: 300px;
+            width: 750px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .old_ie_wrapper tbody {
+            height: auto;
+        }
+
+        #top_btn {
+            font-family: 'Trebuchet MS';
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 18px;
+            text-decoration: none;
+            display: block;
+            margin: 10px;
+            width: 100px;
+
+        }
+
+        #nav_top a {
+            font-family: 'Trebuchet MS';
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            background-color: red;
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        table.eg1,
+        th.eg1,
+        td.eg1 {
+            border: 1px solid black;
+        }
+
+        table.eg2,
+        th.eg2,
+        td.eg2 {
+            border: thin dashed black;
+        }
+
+        table.eg3,
+        th.eg3,
+        td.eg3 {
+            border: initial;
+        }
+
+        table.no-collapse,
+        th.no-collapse,
+        td.no-collapse {
+            border: 1px solid black;
+        }
+
+        table.collapse {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th.eg1 {
+            width: 25%;
+        }
+
+        th.eg2 {
+            height: 70px;
+        }
+
+        table.eg3 {
+            width: 100%;
+        }
+        /* table padding */
+        /* table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 20px;
+        }*/
     </style>
 </head>
+
 <body>
-    <table border="1">
-        <caption>
-            <p>Table 1.0</p>
-            <p>Student's final exam results 2018</p>
-        </caption>
-        <!-- <tr> Creates a table row -->
-        <tr>
-        <!-- <th> Creates a table header, bold and centered -->
-            <th scope="col">Name</th>
-            <th scope="col">Age</th>
-        </tr>
-        <tr>
-            <td>Alexa</td>
-            <td>23</td>
-        </tr>
-        <tr>
-            <td>James</td>
-            <td>35</td>
-        </tr>
-    </table>
-    <hr>
-    <table border=1>
-            <colgroup>
-              <col span="1" style="background-color:green">
-              <col span="1" style="background-color:orange">
-            </colgroup>
+    <nav id="nav_top">
+        <ul>
+            <li>
+                <a href="#simple_tables">Simple Tables</a>
+            </li>
+            <li>
+                <a href="#scrollable_table">Scrollable Table</a>
+            </li>
+            <li>
+                <a href="#table_styling">Styling Tables</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="simple_tables">
+        <table border="1">
+            <caption>
+                <p>Table 1.0</p>
+                <p>Student's final exam results 2018</p>
+            </caption>
+            <!-- <tr> Creates a table row -->
             <tr>
-              <th>Name</th>
-              <th>Age</th>
-            </tr>
-            <tr>
-              <td>Alexa</td>
-              <td>23</td>
-            </tr>
-            <tr>
-              <td>James</td>
-              <td>35</td>
-            </tr>
-          </table>
-    <hr>
-    <table border=1>
-            <colgroup>
-              <col span="1" style="background-color:green">
-              <col span="1" style="background-color:orange">
-            </colgroup>
-            <thead style="color:white">
-              <tr>
+                <!-- <th> Creates a table header, bold and centered -->
                 <th scope="col">Name</th>
                 <th scope="col">Age</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
+            </tr>
+            <tr>
                 <td>Alexa</td>
                 <td>23</td>
-              </tr>
-              <tr>
+            </tr>
+            <tr>
                 <td>James</td>
                 <td>35</td>
-              </tr>
-              <tr>
-                <td>Trisha</td>
-                <td>23</td>
-              </tr>
-            </tbody>
-            <tfoot style="font-style: italic;">
-              <tr>
-                <td>3 Unique Names</td>
-                <td>2 Unique Ages</td>
-              </tr>
-            </tfoot>
-          </table>
-    <hr>
-    <table class="fixed_headers">
-        <thead>
+            </tr>
+        </table>
+        <hr>
+        <table border=1>
+            <colgroup>
+                <col span="1" style="background-color:green">
+                <col span="1" style="background-color:orange">
+            </colgroup>
             <tr>
                 <th>Name</th>
-                <th>Color</th>
-                <th>Description</th>
+                <th>Age</th>
             </tr>
-        </thead>
-        <tbody>
+            <tr>
+                <td>Alexa</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>James</td>
+                <td>35</td>
+            </tr>
+        </table>
+        <hr>
+        <table border=1>
+            <colgroup>
+                <col span="1" style="background-color:green">
+                <col span="1" style="background-color:orange">
+            </colgroup>
+            <thead style="color:white">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alexa</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>James</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Trisha</td>
+                    <td>23</td>
+                </tr>
+            </tbody>
+            <tfoot style="font-style: italic;">
+                <tr>
+                    <td>3 Unique Names</td>
+                    <td>2 Unique Ages</td>
+                </tr>
+            </tfoot>
+        </table>
+        <br>
+    </section>
+    <a href="#nav_top" id="top_btn">Back To Top</a>
+    <hr>
+    <section id="scrollable_table">
+        <table class="fixed_headers">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Color</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>Apple</td>
                     <td>Red</td>
@@ -234,7 +359,151 @@
                     <td>These are green.</td>
                 </tr>
             </tbody>
-    </table>
+        </table>
+        <br>
+
+    </section>
+    <a href="#nav_top" id="top_btn">Back To Top</a>
+    <hr>
+    <h1>Styling Tables</h1>
+    <section id="table_styling">
+        <table class="eg1">
+            <tr>
+                <th class="eg1">Names</th>
+                <th class="eg1">Age</th>
+            </tr>
+            <tr>
+                <td class="eg1">Michael</td>
+                <td class="eg1">21</td>
+            </tr>
+        </table>
+        <br>
+        <table class="eg2">
+            <tr>
+                <th class="eg2">Names</th>
+                <th class="eg2">Age</th>
+            </tr>
+            <tr>
+                <td class="eg2">Michael</td>
+                <td class="eg2">21</td>
+            </tr>
+        </table>
+        <br>
+        <table class="eg3">
+            <tr>
+                <th class="eg3">Names</th>
+                <th class="eg3">Age</th>
+            </tr>
+            <tr>
+                <td class="eg3">Michael</td>
+                <td class="eg3">21</td>
+            </tr>
+        </table>
+        <br>
+        <table class="no-collapse">
+            <tr>
+                <th class="no-collapse">Names</th>
+                <th class="no-collapse">Age</th>
+            </tr>
+            <tr>
+                <td class="no-collapse">Michael</td>
+                <td class="no-collapse">21</td>
+            </tr>
+        </table>
+        <br>
+        <table class="collapse">
+            <tr>
+                <th class="no-collapse">Names</th>
+                <th class="no-collapse">Age</th>
+            </tr>
+            <tr>
+                <td class="no-collapse">Michael</td>
+                <td class="no-collapse">21</td>
+            </tr>
+        </table>
+        <br>
+        <p>The width of the first whole column is decided by the width of the cell with most content:</p>
+        <table>
+            <tr>
+                <th>Names</th>
+                <th>Profession</th>
+            </tr>
+            <tr>
+                <td>Michael Fernandez</td>
+                <td>Doctor</td>
+            </tr>
+            <tr>
+                <td>Amy Frank</td>
+                <td>Computer Engineer</td>
+            </tr>
+        </table>
+
+        <p>Specifying the width for one cell will affect the whole column. Width is set in percentage relative to the whole
+            table:
+        </p>
+        <table>
+            <tr>
+                <th class="eg1">Names</th>
+                <th>Profession</th>
+            </tr>
+            <tr>
+                <td>Michael Fernandez</td>
+                <td>Doctor</td>
+            </tr>
+            <tr>
+                <td>Amy Frank</td>
+                <td>Computer Engineer</td>
+            </tr>
+        </table>
+
+        <p>Specifying the height for one cell will affect the whole row. Height is set in fixed pixels:</p>
+        <table>
+            <tr>
+                <th class="eg2">Names</th>
+                <th>Profession</th>
+            </tr>
+            <tr>
+                <td>Michael Fernandez</td>
+                <td>Doctor</td>
+            </tr>
+            <tr>
+                <td>Amy Frank</td>
+                <td>Computer Engineer</td>
+            </tr>
+        </table>
+
+        <p>Specifying 100% for table width will occupy the whole width of the parent element:</p>
+        <table class="eg3">
+            <tr>
+                <th>Names</th>
+                <th>Profession</th>
+            </tr>
+            <tr>
+                <td>Michael Fernandez</td>
+                <td>Doctor</td>
+            </tr>
+            <tr>
+                <td>Amy Frank</td>
+                <td>Computer Engineer</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Names</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Michael</td>
+                <td>21</td>
+            </tr>
+        </table>
+
         
+    </section>
+    <a href="#nav_top" id="top_btn">Back To Top</a>
+
+
 </body>
+
 </html>
